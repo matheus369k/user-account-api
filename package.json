@@ -1,0 +1,38 @@
+{
+  "name": "user-account",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "scripts": {
+    "start": "tsx ./src/server.ts",
+    "dev": "tsx --watch --env-file=.env ./src/server.ts",
+    "seed": "tsx --env-file=.env ./src/util/seed.ts",
+    "prisma:generate": "prisma generate dev",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@faker-js/faker": "^9.9.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.0.7",
+    "prisma": "^6.10.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "zod": "^3.25.67"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.10.1",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
