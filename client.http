@@ -1,0 +1,36 @@
+# Variables
+@base = http://localhost:3000
+@token = {{LoginUser.response.body.token}} 
+
+### HearthCheck
+# @name HearthCheck
+GET {{base}}/hearth
+
+### CreateUser
+# @name CreateUser 
+POST {{base}}/api/user/register
+Content-Type: application/json
+
+{
+  "name": "User123" , 
+  "email": "user@gmail.com", 
+  "password": "user3703Br" , 
+  "auto_connection": "off"
+}
+
+### LoginUser 
+# @name LoginUser
+POST {{base}}/api/user/login
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com", 
+  "password": "user3703Br" , 
+  "auto_connection": "off"
+}
+
+### ProfileUser
+# @name ProfileUser
+GET {{base}}/api/user
+Content-Type: application/json
+Authorization: Bearer {{token}}

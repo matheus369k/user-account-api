@@ -1,6 +1,6 @@
 import { UserControllers } from '@/controllers/user';
 import { MiddlewareAuth } from '@/middlewares/auth';
-import express from 'express';
+import express,{Request, Response} from 'express';
 
 const routes = express();
 
@@ -11,5 +11,9 @@ routes.get(
 	new MiddlewareAuth().user,
 	new UserControllers().profilerUser,
 );
+
+routes.get('/hearth', (_: Request, res: Response) => {
+	res.send('ok');
+})
 
 export default routes;
