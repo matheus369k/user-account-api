@@ -1,6 +1,6 @@
 import { UserControllers } from '@/controllers/user';
 import { MiddlewareAuth } from '@/middlewares/auth';
-import express,{Request, Response} from 'express';
+import express, { type Request, type Response } from 'express';
 
 const routes = express();
 
@@ -14,6 +14,6 @@ routes.get(
 
 routes.get('/hearth', (_: Request, res: Response) => {
 	res.send('ok');
-})
+});
 
 export default routes;

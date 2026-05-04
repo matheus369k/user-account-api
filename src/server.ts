@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import { env } from './util/env';
-import routes from './routes';
-import { errorHandle } from './util/error-handler';
+import { env } from '@/util/env';
+import routes from '@/routes';
+import { errorHandle } from '@/util/error-handler';
 
 const app = express();
 
